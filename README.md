@@ -12,3 +12,14 @@
 　PHP
 
 # ディレクトリの構成
+
+.
+CODE-SHOP/
+├── htdocs/
+│     ├── common/
+│     │   ├── css/
+│     │   ├── img/
+│     │   └── js/
+│     └── index.html(トップページ)
+├── .git(GitHub関係)
+└── README.md
