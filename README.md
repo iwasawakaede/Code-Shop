@@ -13,6 +13,7 @@
 
 # ディレクトリの構成
 
+<pre>
 .
 CODE-SHOP/
 ├── htdocs/
@@ -23,3 +24,4 @@ CODE-SHOP/
 │     └── index.html(トップページ)
 ├── .git(GitHub関係)
 └── README.md
+</pre>
