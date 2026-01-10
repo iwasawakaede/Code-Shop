@@ -1,7 +1,8 @@
 @import url('https://fonts.googleapis.com/css?family=M+PLUS+Rounded+1c');
-#test {
-  color: gray;
-}
+
+  /* レスポンシブ
+     PC:769px以上  / スマホ:768px以下*/
+
 * {
   outline: solid 1px red;
 }
@@ -11,8 +12,8 @@ body {
     width: 100%;
     /* padding: 0; */
   }
-/* PC向けのレイアウト設定 */
-@media (min-width: 768px) {
+/* スマホ向けのレイアウト設定 */
+@media (max-width: 768px) {
   body {
   }
   h1 {
@@ -31,7 +32,7 @@ body {
   color: #fff;
   font-size: 30px;
   line-height: 1;
-  padding: 18px 32px 10px;
+  padding: 18px 32px;
   margin-right: 15px;
 }
 .search_box {
@@ -72,7 +73,15 @@ body {
 .search_section {
   display: flex;
 }
-@media (min-width: 768px) {
+@media (max-width: 990px) {
+  .search_section {
+    display: grid;
+    grid-template-columns: 300px 300px;
+    /* 稼働確認用 不要に削除してね*/
+    border: #000 3px solid;
+  }
+}
+@media (max-width: 768px) {
   .search_section {
     display: none;
   }
@@ -86,8 +95,8 @@ body {
   border: solid 1px #fff;
   padding: 10px;
 }
-/* PC向けのレイアウト設定 */
-@media (min-width: 768px) {
+/* スマホ向けのレイアウト設定 */
+@media (max-width: 768px) {
   .search_textBox {
     padding: 0 10px;
   }
@@ -110,21 +119,27 @@ body {
   width: 100%;
   display: flex;
 }
-@media (min-width: 768px) {
+@media (max-width: 768px) {
   #main_container {
+      /* display: none; */
   }
 }
 #side_section {
   width: 100%;
 }
-@media (min-width: 768px) {
+@media (max-width: 768px) {
   #side_section {
-    /* visibility: hidden; */
+    background-color: #000;
   }
 }
 .side_box {
   background-color: #E1F5FE;
   width: 420px;
+}
+@media (max-width: 768px) {
+  .side_box {
+    display: none !important;
+  }
 }
 .side_list, .side_list_category, .side_list_tag {
   list-style: none;
@@ -132,6 +147,10 @@ body {
 }
 .side_list {
   padding-top: 20px;
+}
+@media (max-width: 768px) {
+  .side_list {
+  }
 }
 .side_list_space {
   padding-bottom: 40px;
