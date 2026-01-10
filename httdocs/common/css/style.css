@@ -204,8 +204,51 @@ body {
   width: 64px;
   height: 64px;
 }
-#wrapper {
+.demo-btn, .prv-btn {
+  color: #fff;
+  background: #0077CC;
+  border: solid 2px #000;
+  border-radius: 5px;
+  width: 300px;
+  height: 45px;
+  display: inline-block;
+  visibility: visible;
+  padding: 10px;
 }
-button {
-  width: 50px;
+.demo-btn {
+  color: #000;
+  background: #FFFF01;
+  width: 270px;
+  height: 75px;
+}
+.result-textBox{
+  padding: 10px;
+}
+.result-card{
+  border: solid 2px #64B5F6;
+  border-radius: 5px;
+  width: 380px;
+  padding: 30px;
+  margin: 20px;
+}
+.result-titleBox {
+  background-color: #fff;
+  width: 320px;
+  border-radius: 5px 0 0 5px;
+  border-left: 30px solid #64B5F6;
+  padding: 20px;
+  margin-bottom: 20px;
+}
+.result-demoCard {
+  padding: 20px;
+  margin-bottom: 20px;
+}
+.result-btnBox {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: center;
+  padding: 10px;
+}
+#wrapper {
 }
