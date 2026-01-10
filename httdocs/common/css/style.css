@@ -76,9 +76,7 @@ body {
 @media (max-width: 990px) {
   .search_section {
     display: grid;
-    grid-template-columns: 300px 300px;
-    /* 稼働確認用 不要に削除してね*/
-    border: #000 3px solid;
+    grid-template-columns: 235px 235px;
   }
 }
 @media (max-width: 768px) {
@@ -115,17 +113,16 @@ body {
   height: 5px;
 }
 #main_container {
-  background-color: #003087;
+  background-color: #fff;
   width: 100%;
   display: flex;
 }
 @media (max-width: 768px) {
   #main_container {
-      /* display: none; */
   }
 }
 #side_section {
-  width: 100%;
+  width: 420px;
 }
 @media (max-width: 768px) {
   #side_section {
@@ -181,6 +178,24 @@ body {
   padding: 5px;
   margin: 5px;
 }
+/* メイン画面 */
+.category_box {
+  width: 100%;
+  /* height: 123px; */
+  display: flex;
+  /* 稼働確認用 不要に削除してね*/
+  border: #000 3px solid;
+}
+.category_imageBox {
+  width: 100px;
+  height: 123px;
+  display: flex;
+  align-items: center;
+}
+.category_img {
+  width: 64px;
+  height: 64px;
+  margin: auto;
+}
 #wrapper {
-
 }
