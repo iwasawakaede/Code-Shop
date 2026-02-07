@@ -3,12 +3,12 @@
      PC:769px以上  / スマホ:768px以下*/
 * {
   outline: solid 1px red;
+  box-sizing: border-box;
 }
 body {
     font-family: 'M PLUS Rounded 1c', sans-serif;
     font-size: 20px;
     width: 100%;
-    /* padding: 0; */
   }
 /* スマホ向けのレイアウト設定 */
 @media (max-width: 768px) {
@@ -18,13 +18,12 @@ body {
   }
 }
 /* ヘッダー */
-/* ヘッダー */
 .header_section {
   background-color: #0077CC;
+  width: 100%;
 }
 .header_box {
   display: flex;
-  flex-wrap: wrap;
   align-items: center;
   padding: 10px;
 }
@@ -38,8 +37,6 @@ body {
 .search_box {
   display: flex;
   padding-right: 15px;
-}
-.search_input_area {
 }
 .search_input_text {
   background-color: #fff;
@@ -70,18 +67,32 @@ body {
   border-radius: 0 10px 10px 0;
   padding-left: 25px;
 }
+@media (max-width: 768px) {
+  .search_input_text {
+    width: 100%;
+    max-width: 250px;
+  }
+  .search_btn {
+    width: auto;
+    padding: 0 20px;
+  }
+}
 .search_section {
   display: flex;
 }
-@media (max-width: 990px) {
-  .search_section {
-    display: grid;
-    grid-template-columns: 235px 235px;
-  }
-}
 @media (max-width: 768px) {
+  .header_box {
+    flex-direction: column;
+    align-items: stretch;
+  }
+  .header_title {
+    text-align: center;
+    margin-right: 0;
+  }
   .search_section {
-    display: none;
+    width: 100%;
+    justify-content: center;
+    margin-top: 10px;
   }
 }
 .search_textBox {
@@ -92,14 +103,6 @@ body {
   border-radius: 10px;
   border: solid 1px #fff;
   padding: 10px;
-}
-/* スマホ向けのレイアウト設定 */
-@media (max-width: 768px) {
-  .search_textBox {
-    padding: 0 10px;
-  }
-  .search_text {
-  }
 }
 .line_top, .line_center, .line_bottom {
   width: 5px;
@@ -114,30 +117,37 @@ body {
 }
 /* サイドメニュー */
 #main_container {
-  background-color: #fff;
-  width: 100%;
-  max-width: 1440px;
   display: flex;
+  justify-content: center;
+}
+#main-section {
+  padding: 0 20px;
+}
+#side_section {
+  width: 400px;
+  background-color: #E1F5FE;
+}
+.main-section {
+  width: calc(100% - 400px);
 }
 @media (max-width: 768px) {
   #main_container {
+    flex-direction: column;
   }
-}
-#side_section {
-  width: 100%;
-}
-@media (max-width: 768px) {
   #side_section {
-    background-color: #000;
+    width: 100%;
+  }
+  .main-section {
+    width: 100%;
   }
 }
 .side_box {
-  background-color: #E1F5FE;
-  width: 420px;
+  width: 100%;
+  max-width: 400px;
 }
 @media (max-width: 768px) {
   .side_box {
-    display: none !important;
+    display: none;
   }
 }
 .side_list, .side_list_category, .side_list_tag {
@@ -146,10 +156,6 @@ body {
 }
 .side_list {
   padding-top: 20px;
-}
-@media (max-width: 768px) {
-  .side_list {
-  }
 }
 .side_list_space {
   padding-bottom: 40px;
@@ -184,27 +190,34 @@ body {
 /* カテゴリーアイコン */
 .main-section {
   width: 100%;
+  max-width: 1000px;
 }
 .category_box {
   width: 100%;
-  /* height: 123px; */
-  display: flex;
-  gap: 30px;
-  /* 稼働確認用 不要に削除してね*/
-  border: red 3px solid;
-}
-.category_box {
-  padding: 30px 60px;
-}
-.category_imageBox {
-  width: 100px;
-  height: 123px;
+  max-width: 1000px;
   display: flex;
   flex-wrap: wrap;
-  align-items: center;
-  justify-content: center;
+  /* gap: 20px; */
+  /* margin: 0 60px; */
 }
-.category_image {
+  .category_imageBox {
+    max-width: 100px;
+    height: 123px;
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    width: 100px;
+  }
+@media (max-width: 768px) {
+  .category_box {
+    flex-direction: column;
+    gap: 15px;
+    padding: 20px;
+  }
+  .category_imageBox {
+    width: 100%;
+    justify-content: flex-start;
+  }
 }
 .category_img {
   width: 64px;
@@ -230,10 +243,12 @@ body {
 /* 販売コード一覧 */
 .result-cardBox {
   display: flex;
-  border: solid 5px #000;
+  flex-wrap: wrap;
+  justify-content: center;
 }
 .result-box{
   width: 100%;
+  max-width: 1000px;
 }
 .result-textBox{
   width: 100%;
@@ -245,6 +260,12 @@ body {
   width: 380px;
   padding: 30px;
   margin: 20px;
+}
+@media (max-width: 768px) {
+  .result-card {
+    width: 100%;
+    margin: 10px 0;
+  }
 }
 .result-titleBox {
   background-color: #fff;
@@ -264,6 +285,4 @@ body {
   align-items: center;
   justify-content: center;
   padding: 10px;
-}
-#wrapper {
 }
